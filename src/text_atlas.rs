@@ -502,6 +502,7 @@ impl TextAtlas {
                         module: &self.shader,
                         entry_point: "vs_main",
                         buffers: &self.vertex_buffers,
+                        compilation_options: Default::default(),
                     },
                     fragment: Some(FragmentState {
                         module: &self.shader,
@@ -511,6 +512,7 @@ impl TextAtlas {
                             blend: Some(BlendState::ALPHA_BLENDING),
                             write_mask: ColorWrites::default(),
                         })],
+                        compilation_options: Default::default(),
                     }),
                     primitive: PrimitiveState::default(),
                     depth_stencil: depth_stencil.clone(),
